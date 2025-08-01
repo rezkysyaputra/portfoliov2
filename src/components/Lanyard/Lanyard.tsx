@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/no-unknown-property */
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
@@ -20,6 +19,7 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
+import React from "react";
 
 // replace with your own imports, see the usage snippet for details
 const cardGLB = "/assets/lanyard/card.glb";
@@ -284,16 +284,16 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
         </RigidBody>
       </group>
       <mesh ref={band}>
-        <meshLineGeometry />
-        <meshLineMaterial
-          color="white"
-          depthTest={false}
-          resolution={isSmall ? [1000, 2000] : [1000, 1000]}
-          useMap
-          map={texture}
-          repeat={[-4, 1]}
-          lineWidth={1}
-        />
+        {React.createElement("meshLineGeometry")}
+        {React.createElement("meshLineMaterial", {
+          color: "white",
+          depthTest: false,
+          resolution: isSmall ? [1000, 2000] : [1000, 1000],
+          useMap: true,
+          map: texture,
+          repeat: [-4, 1],
+          lineWidth: 1,
+        })}
       </mesh>
     </>
   );
