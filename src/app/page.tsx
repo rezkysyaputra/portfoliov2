@@ -123,18 +123,6 @@ export default function Portfolio() {
       ],
       icon: <Code className="size-5" />,
     },
-    {
-      category: "Soft Skills",
-      technologies: [
-        "Problem Solving",
-        "Analytical Thinking",
-        "Team Collaboration",
-        "Effective Communication",
-        "Quick Adaptation",
-        "Initiative",
-      ],
-      icon: <Smartphone className="size-5" />,
-    },
   ];
 
   const projects = [
@@ -346,11 +334,11 @@ export default function Portfolio() {
                   innovative web applications and solving real-world problems
                   through technology.
                 </p>
-                <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+                {/* <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
                   Specializing in fullstack development with modern
                   technologies, always eager to learn and contribute to
                   meaningful projects.
-                </p>
+                </p> */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button
                     size="lg"
@@ -393,7 +381,7 @@ export default function Portfolio() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="relative"
+                className="relative w-full  md:h-[400px] lg:h-[500px] flex justify-center items-center"
               >
                 <Lanyard position={[0, 0, 16]} gravity={[0, -40, 0]} />
               </motion.div>
@@ -421,10 +409,25 @@ export default function Portfolio() {
                 Skills & Technologies
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg leading-relaxed">
-                I specialize in building comprehensive web applications
-                (frontend & backend) with focus on real-world project
-                experience, modern development practices, and industry-standard
-                tools. Here are the technologies and skills I work with:
+                I&apos;m{" "}
+                <span className="font-semibold text-foreground">
+                  Muh. Rezky Syaputra
+                </span>
+                , an active Informatics student at{" "}
+                <span className="font-semibold text-foreground">
+                  Universitas AMIKOM Yogyakarta
+                </span>
+                , originally from Sulawesi Tenggara and currently based in
+                Yogyakarta. I specialize in building comprehensive web
+                applications (frontend & backend) with focus on real-world
+                project experience, modern development practices, and
+                industry-standard tools. My learning journey encompasses formal
+                education, professional certifications, and practical
+                application of web development frameworks. I excel in both
+                independent work and team collaboration, bringing strong
+                communication, analytical thinking, and rapid technology
+                adaptation skills to every project. Here are the technologies
+                and skills I work with:
               </p>
             </motion.div>
 
@@ -598,24 +601,12 @@ export default function Portfolio() {
                 Background
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                My Background & Qualifications
+                Education & Qualifications
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg leading-relaxed">
-                I&apos;m{" "}
-                <span className="font-semibold text-foreground">
-                  Muh. Rezky Syaputra
-                </span>
-                , an active Computer Science student at{" "}
-                <span className="font-semibold text-foreground">
-                  Universitas AMIKOM Yogyakarta
-                </span>
-                , with extensive experience in training programs and hands-on
-                development projects. My learning journey encompasses formal
-                education, professional certifications, and practical
-                application of modern web technologies. I excel in both
-                independent work and team collaboration, bringing strong
-                communication, analytical thinking, and rapid technology
-                adaptation skills to every project.
+                My educational background and professional development journey
+                through formal education and specialized training programs that
+                have shaped my expertise in software development.
               </p>
             </motion.div>
 
@@ -710,7 +701,7 @@ export default function Portfolio() {
                       {
                         title: "Fullstack Software Development",
                         organization: "ProductZilla Academy - MSIB Batch 7",
-                        period: "September 2024 - December 2024",
+                        period: "Sep 2024 - Dec 2024",
                         description:
                           "Completed intensive 4-month fullstack software development program through Kampus Merdeka. Focused on MERN stack development with hands-on project experience and professional workflow practices.",
                         achievements: [
