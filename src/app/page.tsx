@@ -14,7 +14,6 @@ import {
   Code,
   Database,
   Globe,
-  Smartphone,
   Server,
   Download,
   Mail,
@@ -101,65 +100,63 @@ export default function Portfolio() {
     },
     {
       category: "Database",
-      technologies: [
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "Database Design",
-        "Query Optimization",
-        "Data Modeling",
-      ],
+      technologies: ["MySQL", "PostgreSQL", "MongoDB"],
       icon: <Database className="size-5" />,
     },
     {
       category: "Tools & DevOps",
-      technologies: [
-        "Git & GitHub",
-        "Docker",
-        "CI/CD",
-        "VS Code",
-        "Postman",
-        "Figma",
-      ],
+      technologies: ["Git & GitHub", "VS Code", "Postman", "Figma"],
       icon: <Code className="size-5" />,
     },
   ];
 
   const projects = [
     {
+      title: "Penertbit Bangun Bangsa",
+      description:
+        "The official website for Penerbit Bangun Bangsa, a book publisher. This site features a comprehensive book catalog, publisher profile, news, and other information related to publishing activities. Built with WordPress and Elementor for easy content management and a professional appearance.",
+      image: "/bangunbangsa.png",
+      technologies: ["Wordpress", "Elementor"],
+      challenges:
+        "Designing a user-friendly interface to display book catalogs, ensuring easy navigation for visitors, and maintaining a professional and trustworthy publisher image.",
+      github: null,
+      demo: "https://penerbitbangunbangsa.id/",
+      featured: false,
+    },
+    {
       title: "TriByte - Data Service Landing Page",
       description:
-        "A professional landing page designed to market data cleaning and visualization services. TriByte showcases the company's capabilities in helping businesses optimize their data quickly and efficiently, featuring modern design and compelling service presentations.",
+        "A modern landing page for TriByte, a data service provider offering data cleaning and visualization solutions for businesses. The website highlights services, showcases client benefits, and encourages conversions through a clean, modern UI and interactive elements.",
       image: "/tribyte.png",
-      technologies: ["React.js", "TypeScript", "Tailwind CSS"],
+      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       challenges:
-        "Creating an engaging and conversion-focused design that effectively communicates complex data services, implementing smooth animations and responsive layouts to showcase service offerings professionally.",
+        "Building a visually appealing and conversion-focused landing page, integrating smooth scroll-based animations, and ensuring responsive design across devices.",
       github: "https://github.com/rezkysyaputra/data-service-landingpage",
       demo: "https://tribyte.me/",
-      featured: true,
+      featured: false,
     },
     {
       title: "CINETIX - Movie Discovery Platform",
       description:
-        "Modern movie discovery platform with advanced search, filtering, and recommendation features. Built with Laravel backend and responsive frontend design for optimal user experience.",
+        "A web application for online movie ticket sales. Users can browse movies, select showtimes, choose seats, and purchase tickets with integrated payment. Features include real-time seat availability, user authentication, and a responsive interface. Built with Laravel and MySQL, with payment handled by Midtrans.",
       image: "/cinetix.png",
       technologies: [
         "Laravel",
         "MySQL",
         "Tailwind CSS",
-        "PHP",
-        "Filament",
         "Midtrans",
+        "Filament",
       ],
       challenges:
-        "Creating efficient search algorithms, implementing user preference system, and optimizing database queries for fast movie data retrieval.",
+        "Implementing real-time seat selection, integrating secure payment with Midtrans, and optimizing the backend for fast data retrieval and smooth user experience.",
       github: "https://github.com/rezkysyaputra/cinema-laravel12",
       demo: "http://cine-tix.my.id/",
+      featured: true,
     },
     {
       title: "API Beli Galon - Water Delivery API",
       description:
-        "RESTful API service for water gallon delivery system developed during MSIB 7 program. Features include order management, payment processing with Midtrans, and comprehensive API documentation.",
+        "A RESTful API for a water gallon delivery service, developed as part of the MSIB 7 program. The API supports order management, payment integration with Midtrans, unit testing for reliability, and provides detailed Swagger documentation for easy integration by client apps.",
       image: "/begal.png",
       technologies: [
         "Express.js",
@@ -168,16 +165,18 @@ export default function Portfolio() {
         "Midtrans",
         "Swagger",
         "TypeScript",
+        "Unit Testing",
       ],
       challenges:
-        "Designing scalable API architecture, implementing secure payment integration, and creating comprehensive API documentation with Swagger for easy integration.",
+        "Designing a scalable REST API, integrating secure payment with Midtrans, implementing unit testing for API endpoints, and documenting endpoints thoroughly with Swagger for developer usability.",
       github: "https://github.com/rezkysyaputra/begal-backend",
       demo: null,
+      featured: true,
     },
   ];
 
   return (
-    <div className="flex min-h-[100dvh] flex-col scroll-smooth">
+    <div className="flex min-h-[100dvh]  flex-col scroll-smooth">
       <header
         className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${
           isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"
@@ -312,34 +311,27 @@ export default function Portfolio() {
           <div className="container px-4 md:px-6 relative">
             <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="flex flex-col items-center justify-center  text-center">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
+                className="w-full max-w-2xl"
               >
                 <Badge
                   className="mb-4 mt-10 rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  Software Developer
+                  Fullstack Web Developer
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                  Building Digital Experiences That Matter
+                  Hi, I&apos;m Rezky. I build web apps end-to-end.
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-                  Hi! I&apos;m{" "}
-                  <span className="font-semibold text-foreground">Rezky</span>,
-                  a passionate software developer dedicated to creating
-                  innovative web applications and solving real-world problems
-                  through technology.
+                <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                  Fullstack Web Developer focused on building modern, efficient,
+                  and user-friendly web applications.
                 </p>
-                {/* <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-                  Specializing in fullstack development with modern
-                  technologies, always eager to learn and contribute to
-                  meaningful projects.
-                </p> */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
                   <Button
                     size="lg"
                     className="rounded-full h-12 px-8 text-base"
@@ -365,25 +357,16 @@ export default function Portfolio() {
                     </Link>
                   </Button>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 justify-center">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <MapPin className="size-4" />
                     <span>Sleman, Yogyakarta</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Calendar className="size-4" />
-                    <span>Software Developer</span>
+                    <span>Fullstack Web Developer</span>
                   </div>
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="relative w-full  md:h-[400px] lg:h-[500px] flex justify-center items-center"
-              >
-                <Lanyard position={[0, 0, 16]} gravity={[0, -40, 0]} />
               </motion.div>
             </div>
           </div>
@@ -406,28 +389,16 @@ export default function Portfolio() {
                 About Me
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Skills & Technologies
+                Skills & Tech
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg leading-relaxed">
                 I&apos;m{" "}
                 <span className="font-semibold text-foreground">
                   Muh. Rezky Syaputra
                 </span>
-                , an active Informatics student at{" "}
-                <span className="font-semibold text-foreground">
-                  Universitas AMIKOM Yogyakarta
-                </span>
-                , originally from Sulawesi Tenggara and currently based in
-                Yogyakarta. I specialize in building comprehensive web
-                applications (frontend & backend) with focus on real-world
-                project experience, modern development practices, and
-                industry-standard tools. My learning journey encompasses formal
-                education, professional certifications, and practical
-                application of web development frameworks. I excel in both
-                independent work and team collaboration, bringing strong
-                communication, analytical thinking, and rapid technology
-                adaptation skills to every project. Here are the technologies
-                and skills I work with:
+                , an Informatics student at AMIKOM University Yogyakarta.
+                Experienced in building end-to-end web apps using modern tools
+                and frameworks. Ready to work solo or in a team.
               </p>
             </motion.div>
 
@@ -489,12 +460,11 @@ export default function Portfolio() {
                 Portfolio
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Featured Work
+                Featured Projects
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg leading-relaxed">
-                Here are some projects that demonstrate my skills in building
-                scalable applications, APIs, and solving real-world problems
-                with code.
+                Some projects I&apos;ve built, from landing pages and APIs to
+                fullstack web apps.
               </p>
             </motion.div>
 
@@ -567,12 +537,19 @@ export default function Portfolio() {
                           No Live Demo
                         </Button>
                       )}
-                      <Button variant="outline" asChild>
-                        <Link href={project.github} target="_blank">
+                      {typeof project.github === "string" && project.github ? (
+                        <Button variant="outline" asChild>
+                          <Link href={project.github} target="_blank">
+                            <Github className="mr-2 size-4" />
+                            Source Code
+                          </Link>
+                        </Button>
+                      ) : (
+                        <Button variant="outline" disabled>
                           <Github className="mr-2 size-4" />
-                          Source Code
-                        </Link>
-                      </Button>
+                          No Source Code
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -601,12 +578,11 @@ export default function Portfolio() {
                 Background
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Education & Qualifications
+                Education & Certifications
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg leading-relaxed">
-                My educational background and professional development journey
-                through formal education and specialized training programs that
-                have shaped my expertise in software development.
+                My education and training history that supports my web
+                development expertise.
               </p>
             </motion.div>
 
@@ -629,27 +605,27 @@ export default function Portfolio() {
                   <div className="space-y-8">
                     {[
                       {
-                        degree: "Bachelor of Computer Science",
+                        degree: "BSc Informatics",
                         school: "AMIKOM University Yogyakarta",
                         period: "2022 - Present",
                         description:
-                          "Active Computer Science student with focus on Software Engineering and Web Development. Capable of building comprehensive web applications with experience in real projects.",
+                          "Active student, focused on web app development and software engineering.",
                         achievements: [
-                          "Focus on Software Engineering",
-                          "Strong communication & teamwork abilities",
-                          "Familiar with industry tools and technologies",
+                          "Software Engineering focus",
+                          "Teamwork & communication",
+                          "Industry tools & frameworks",
                         ],
                       },
                       {
-                        degree: "Science Major (IPA)",
-                        school: "Madrasah Aliyah Hubbul Wathan",
+                        degree: "Science Major",
+                        school: "MA Hubbul Wathan",
                         period: "2019 - 2022",
                         description:
-                          "Graduated from Islamic Senior High School with Science major. Developed strong analytical thinking and problem-solving skills.",
+                          "Graduated in Science, strong analytical and problem-solving skills.",
                         achievements: [
-                          "Science and Mathematics focus",
-                          "Strong analytical thinking skills",
-                          "Foundation in scientific methodology",
+                          "Science & Math focus",
+                          "Analytical thinking",
+                          "Scientific methodology basics",
                         ],
                       },
                     ].map((edu, i) => (
@@ -700,14 +676,14 @@ export default function Portfolio() {
                     {[
                       {
                         title: "Fullstack Software Development",
-                        organization: "ProductZilla Academy - MSIB Batch 7",
+                        organization: "ProductZilla Academy - MSIB 7",
                         period: "Sep 2024 - Dec 2024",
                         description:
-                          "Completed intensive 4-month fullstack software development program through Kampus Merdeka. Focused on MERN stack development with hands-on project experience and professional workflow practices.",
+                          "4-month bootcamp, focused on MERN stack and professional workflow.",
                         achievements: [
-                          "MERN Stack Development (MongoDB, Express.js, React.js, Node.js)",
-                          "Professional development workflow with Git and deployment",
-                          "Final project: RESTful API for water delivery system",
+                          "MERN Stack (MongoDB, Express.js, React.js, Node.js)",
+                          "Git workflow & deployment",
+                          "Project: RESTful API for water delivery",
                         ],
                       },
                       {
@@ -715,11 +691,11 @@ export default function Portfolio() {
                         organization: "Digital Talent Scholarship - Kominfo",
                         period: "2023",
                         description:
-                          "Completed Junior Web Developer certification program through Digital Talent Scholarship by Ministry of Communication and Informatics. Focused on PHP and MySQL development with hands-on web development experience.",
+                          "Junior Web Developer certification, focused on PHP & MySQL.",
                         achievements: [
-                          "Web development fundamentals (HTML, CSS, JavaScript, PHP)",
-                          "Database management with MySQL",
-                          "Final project: Simple Library Management System using PHP & MySQL",
+                          "Web dev basics (HTML, CSS, JS, PHP)",
+                          "MySQL database",
+                          "Project: Simple library system",
                         ],
                       },
                     ].map((cert, i) => (
@@ -791,12 +767,11 @@ export default function Portfolio() {
                 Contact
               </Badge>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-                Let&apos;s Collaborate
+                Contact
               </h2>
               <p className="mx-auto max-w-[700px] text-primary-foreground/80 md:text-xl leading-relaxed">
-                I&apos;m always open to new projects and learning opportunities.
-                Let&apos;s discuss how we can bring your ideas to life into an
-                amazing website!
+                Interested in working together or have a project idea?
+                Let&apos;s connect!
               </p>
             </motion.div>
 
