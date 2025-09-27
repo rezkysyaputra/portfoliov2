@@ -799,17 +799,6 @@ export default function Portfolio() {
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="size-10 rounded-full bg-white/20 flex items-center justify-center">
-                        <Phone className="size-5" />
-                      </div>
-                      <div>
-                        <p className="font-medium">WhatsApp</p>
-                        <p className="text-primary-foreground/80">
-                          +62 852-1933-1476
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="size-10 rounded-full bg-white/20 flex items-center justify-center">
                         <MapPin className="size-5" />
                       </div>
                       <div>
